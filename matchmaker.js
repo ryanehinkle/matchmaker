@@ -12,9 +12,9 @@ function Range(a,b){ //Custom function to set a variable to a range/list of numb
 	return [...Array(b-a+1).keys()].map(x => x+a);
 }
 
-let match = Range(90, 100) //These are the range thresholds
-let friend = Range(75, 89)
-let goAway = Range(0, 74)
+let match = Range(90, 100); //These are the range thresholds
+let friend = Range(75, 89);
+let goAway = Range(0, 74);
 
 function calculateCompatibility() { 
     console.log("Calculating compatability.."); //Logs when the function starts
@@ -42,11 +42,11 @@ function calculateCompatibility() {
     document.getElementById("score").innerHTML = "Your compatability score is " + totalWeighted + "%";
 
     if(match.includes(totalWeighted)) { //Displays remark based on threshold ranges
-        document.getElementById("remark").innerHTML = "♡ We're a great match! ♡"
+        document.getElementById("remark").innerHTML = "♡ We're a great match! ♡";
     } else if(friend.includes(totalWeighted)) {
-        document.getElementById("remark").innerHTML = "We would probably be decent friends ¯\\_(ツ)_/¯"
+        document.getElementById("remark").innerHTML = "We would probably be decent friends ¯\\_(ツ)_/¯";
     } else if(goAway.includes(totalWeighted)) {
-        document.getElementById("remark").innerHTML = "Go away! ⸨◺_◿⸩"
+        document.getElementById("remark").innerHTML = "Go away! ⸨◺_◿⸩";
     }
 
     detailed.disabled = false; //Enables the See Detailed Results button to be pressed
