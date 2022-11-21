@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+Name: Ryan Hinkle
+Class: CPSC-20000 02
+Project: Matchmaker for the Web
+Date: November 19, 2022
+-->
+
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+	<title>Matchmaker</title>
+</head>
+
+<body style="text-align: center;">
+	<h1> <!--Title and animated hearts-->
+		<img src="heart.gif"
+			alt="Animated Hearts" style="width:75px;height:75px;" > Matchmaker
+		<img src="heart.gif"
+			alt="Animated Hearts" style="width:75px;height:75px;" > </h1>
+
+	<p>This program is going to find out how compatible we are.
+		It's going to ask you 5 questions. <br> To each one, select
+		how strongly you agree or disagree from the drop down list.
+		Good luck :)</p> <!--User instructions for program-->
+	<br>
+
+	<label>Hockey is the best sport to watch.</label> <br> <!--Question 1-->
+	<select id="q1">
+		<option value="5">Strongly Agree</option>
+		<option value="4">Agree</option>
+		<option value="3">Neutral</option>
+		<option value="2">Disagree</option>
+		<option value="1">Strongly Disagree</option>
+	</select>
+	<br> <br>
+
+	<label>Computer science is very fun.</label> <br> <!--Question 2-->
+	<select id="q2">
+		<option value="5">Strongly Agree</option>
+		<option value="4">Agree</option>
+		<option value="3">Neutral</option>
+		<option value="2">Disagree</option>
+		<option value="1">Strongly Disagree</option>
+	</select>
+	<br> <br>
+
+	<label>Dogs are better than cats.</label> <br> <!--Question 3-->
+	<select id="q3">
+		<option value="5">Strongly Agree</option>
+		<option value="4">Agree</option>
+		<option value="3">Neutral</option>
+		<option value="2">Disagree</option>
+		<option value="1">Strongly Disagree</option>
+	</select>
+	<br> <br>
+
+	<label>Autumn is the best season.</label> <br> <!--Question 4-->
+	<select id="q4">
+		<option value="5">Strongly Agree</option>
+		<option value="4">Agree</option>
+		<option value="3">Neutral</option>
+		<option value="2">Disagree</option>
+		<option value="1">Strongly Disagree</option>
+	</select>
+	<br> <br>
+
+	<label>A 30 minute drive is too long.</label> <br> <!--Question 5-->
+	<select id="q5">
+		<option value="5">Strongly Agree</option>
+		<option value="4">Agree</option>
+		<option value="3">Neutral</option>
+		<option value="2">Disagree</option>
+		<option value="1">Strongly Disagree</option>
+	</select>
+
+	<br> <br> <br>
+	<button onclick="calculateCompatibility()">Calculate Compatibility</button>  <!--Calc compatability button-->
+	<p id="score"></p>  <!--Your total compatability score is: -->
+	<p id="remark"></p> <!--ie. We're a great match!-->
+
+	<br>
+
+	<button disabled="true" id="detailed" onclick="detailedResults()">See Detailed Results</button>  <!--See detailed results button-->
+
+	<p id="desc"></p> <!--Explanation text and element for each questions results-->
+	<p id="detail1"></p>
+	<p id="detail2"></p>
+	<p id="detail3"></p>
+	<p id="detail4"></p>
+	<p id="detail5"></p>
+
+	<script src="matchmaker.js"></script> <!--Link to external JS file-->
+
+</body>
+</html>
